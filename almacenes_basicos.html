@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>almacenes basicos</title>
+    <link rel="stylesheet" href="almacenes_basicos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="almacenes_basicos.js" defer></script>
+</head>
+<body>
+    <!-------------------------------------->
+    <!--|estructuracion_almacenes_basicos|-->
+    <!-------------------------------------->
+    <main class="contenedor_almacen">
+        <header class="encabezado_almacen">
+            <div class="icono_almacen">
+                <i class="fa-solid fa-boxes-stacked"></i>
+            </div>
+            <div>
+                <h1>Almacenes Básicos</h1>
+                <p>Administra los productos de tu almacén.</p>
+            </div>
+        </header>
+        <!------------------------>
+        <!--|resumen_inventario|-->
+        <!------------------------>
+        <section class="resumen_inventario">
+            <div class="tarjeta_resumen">
+                <i class="fa-solid fa-box"></i>
+                <div>
+                    <span>Productos</span>
+                    <strong id="total_productos">0</strong>
+                </div>
+            </div>
+            <div class="tarjeta_resumen">
+                <i class="fa-solid fa-cubes"></i>
+                <div>
+                    <span>Unidades</span>
+                    <strong id="total_unidades">0</strong>
+                </div>
+            </div>
+            <div class="tarjeta_resumen">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <div>
+                    <span>Inventario</span>
+                    <strong id="valor_inventario">$0.00</strong>
+                </div>
+            </div>
+        </section>
+        <!---------------------------->
+        <!--|formulario_de_producto|-->
+        <!---------------------------->
+        <section class="seccion_formulario">
+            <h2>Agregar producto</h2>
+            <form id="formulario_producto">
+                <div class="campo_formulario">
+                    <label for="nombre_producto">Nombre</label>
+                    <input type="text" id="nombre_producto" placeholder="Ejemplo: Camisa" required>
+                </div>
+                <div class="campo_formulario">
+                    <label for="precio_producto">Precio</label>
+                    <input type="number" id="precio_producto" placeholder="0.00" min="0" step="0.01" required>
+                </div>
+                <div class="campo_formulario">
+                    <label for="cantidad_producto">Cantidad</label>
+                    <input type="number" id="cantidad_producto" placeholder="0" min="1" required>
+                </div>
+                <button class="boton_agregar" type="submit"><i class="fa-solid fa-plus"></i>Agregar</button>
+            </form>
+        </section>
+        <!------------------------>
+        <!--|tabla_de_productos|-->
+        <!------------------------>
+        <section class="seccion_tabla">
+            <div class="titulo_tabla">
+                <div>
+                    <h2>Inventario</h2>
+                    <p>Productos registrados</p>
+                </div>
+                <button id="vaciar_inventario" class="boton_vaciar" type="button"><i class="fa-solid fa-trash"></i>Vaciar</button>
+            </div>
+            <div class="tabla_responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla_productos"></tbody>
+                </table>
+            </div>
+            <div id="mensaje_vacio" class="mensaje_vacio">
+                <i class="fa-solid fa-box-open"></i>
+                <p>No hay productos registrados.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

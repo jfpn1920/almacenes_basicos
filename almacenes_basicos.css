@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+    color: #1e293b;
+}
+/*------------------------------*/
+/*--|estilo_almacenes_basicos|--*/
+/*------------------------------*/
+.contenedor_almacen {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+.encabezado_almacen {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+.icono_almacen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: #dbeafe;
+    color: #2563eb;
+    font-size: 27px;
+}
+.encabezado_almacen h1 {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.encabezado_almacen p {
+    color: #64748b;
+    font-size: 14px;
+}
+/*-------------------------------*/
+/*--|estilo_resumen_inventario|--*/
+/*-------------------------------*/
+.resumen_inventario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.tarjeta_resumen {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+}
+.tarjeta_resumen > i {
+    color: #2563eb;
+    font-size: 25px;
+}
+.tarjeta_resumen span {
+    display: block;
+    margin-bottom: 4px;
+    color: #64748b;
+    font-size: 12px;
+}
+.tarjeta_resumen strong {
+    color: #1e293b;
+    font-size: 19px;
+}
+/*-----------------------------------*/
+/*--|estilo_formulario_de_producto|--*/
+/*-----------------------------------*/
+.seccion_formulario {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    background: #ffffff;
+}
+.seccion_formulario h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+#formulario_producto {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: end;
+    gap: 12px;
+}
+.campo_formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.campo_formulario label {
+    color: #475569;
+    font-size: 12px;
+    font-weight: bold;
+}
+.campo_formulario input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+}
+.campo_formulario input:focus {
+    border-color: #2563eb;
+}
+.boton_agregar {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+}
+.boton_agregar:hover {
+    background: #1d4ed8;
+}
+/*-------------------------------*/
+/*--|estilo_tabla_de_productos|--*/
+/*-------------------------------*/
+.seccion_tabla {
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    background: #ffffff;
+}
+.titulo_tabla {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+    border-bottom: 1px solid #e2e8f0;
+}
+.titulo_tabla h2 {
+    margin-bottom: 4px;
+    font-size: 19px;
+}
+.titulo_tabla p {
+    color: #64748b;
+    font-size: 12px;
+}
+.boton_vaciar {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 8px;
+    background: #ef4444;
+    color: #ffffff;
+    cursor: pointer;
+}
+.boton_vaciar:hover {
+    background: #dc2626;
+}
+.tabla_responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    padding: 13px;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 12px;
+    text-align: left;
+}
+td {
+    padding: 13px;
+    border-top: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 13px;
+}
+td strong {
+    color: #1e293b;
+}
+.acciones {
+    display: flex;
+    gap: 7px;
+}
+.boton_editar, .boton_eliminar {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 7px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.boton_editar {
+    background: #f59e0b;
+}
+.boton_eliminar {
+    background: #ef4444;
+}
+.mensaje_vacio {
+    padding: 35px;
+    color: #94a3b8;
+    text-align: center;
+}
+.mensaje_vacio i {
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+.mensaje_vacio p {
+    font-size: 13px;
+}
